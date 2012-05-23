@@ -2,6 +2,11 @@ require "sinatra"
 
 enable :sessions
 
+
+get '/' do
+  "directr"
+end
+
 get '/wrap/in' do
   session[:wrap_out_url] = params[:out]
   redirect params[:in]
@@ -17,7 +22,7 @@ get '/test' do
 end
 
 get '/test/middle' do
-  "In the middle... <a href='/wrap/out'>Continue</a> #{session.inspect}"
+  "In the middle... <a href='/wrap/out'>Continue</a>"
 end
 
 get '/test/out' do
