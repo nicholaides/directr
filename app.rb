@@ -22,7 +22,7 @@ get '/test' do
 end
 
 get '/test/middle' do
-  "In the middle... <a href='/wrap/out'>Continue</a>"
+  redirect '/wrap/out'
 end
 
 get '/test/out' do
